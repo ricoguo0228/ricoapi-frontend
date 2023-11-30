@@ -440,17 +440,17 @@ declare namespace API {
   type UserUpdateRequest = {
     gender?: number;
     id?: string;
-    userAccount?: string;
-    userAvatar?: string;
+    sureUserPassword?: string;
     userName?: string;
     userPassword?: string;
-    userRole?: string;
   };
 
   type UserVO = {
+    accessKey?: string;
     createTime?: string;
     gender?: number;
     id?: string;
+    secretKey?: string;
     updateTime?: string;
     userAccount?: string;
     userAvatar?: string;

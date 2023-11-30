@@ -6,6 +6,7 @@ export default [
     layout: false,
     routes: [{ name: '登录', path: '/user/login', component: './User/Login' }],
   },
+  { name: '用户中心', path: '/center', component: './User/Center',hideInMenu: true },
   {
     path: '/admin',
     name: '管理页',
@@ -16,7 +17,5 @@ export default [
       { name: '接口分析', icon: 'analysis', path: '/admin/interface_analysis', component: './Admin/InterfaceAnalysis' },
     ],
   },
-
-  // { path: '/', redirect: '/welcome' },
   { path: '*', layout: false, component: './404' },
 ];
