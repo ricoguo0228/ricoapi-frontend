@@ -7,6 +7,7 @@ import { history, Link } from '@umijs/max';
 import { requestConfig } from './requestConfig';
 import {getLoginUserUsingGet} from "@/services/yuapi-backend/userController";
 import {InitialState} from "@/typings";
+import Settings from "../config/defaultSettings";
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -18,6 +19,7 @@ export async function getInitialState(): Promise<InitialState> {
   // 当页面首次加载时，获取要全局保存的数据，比如用户登录信息
   const state: InitialState = {
     loginUser: undefined,
+    settings:Settings
   }
   try {
     const res = await getLoginUserUsingGet();

@@ -2,7 +2,7 @@ import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
 import '@umijs/max';
 const Footer: React.FC = () => {
-  const defaultMessage = '蚂蚁集团体验技术部出品';
+  const defaultMessage = '我的世界将被摧毁';
   const currentYear = new Date().getFullYear();
   return (
     <DefaultFooter
@@ -12,21 +12,15 @@ const Footer: React.FC = () => {
       copyright={`${currentYear} ${defaultMessage}`}
       links={[
         {
-          key: '鱼皮接口',
-          title: '鱼皮接口',
-          href: 'https://pro.ant.design',
+          key: '要不要访问我的GitHub？',
+          title: '要不要访问我的GitHub？',
+          href: 'https://github.com/ricoguo0228',
           blankTarget: true,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
-          blankTarget: true,
-        },
-        {
-          key: '鱼皮接口',
-          title: '鱼皮接口',
-          href: 'https://ant.design',
+          href: 'https://github.com/ricoguo0228',
           blankTarget: true,
         },
       ]}

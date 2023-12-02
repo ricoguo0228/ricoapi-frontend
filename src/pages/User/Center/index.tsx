@@ -2,10 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {getLoginUserUsingGet, updateUserUsingPost} from "@/services/yuapi-backend/userController";
 import {Avatar, Button, Col, Descriptions,  Divider, message, Row} from "antd";
 import UpdateUserInfo from "@/pages/User/Center/components/UpdateModal";
-import {ActionType, ProColumns, ProTable} from "@ant-design/pro-components";
-import {PlusOutlined} from "@ant-design/icons";
-import {SortOrder} from "antd/es/table/interface";
-import {listInterfaceInfoByPageUsingGet} from "@/services/yuapi-backend/interfaceInfoController";
+import {ActionType, ProColumns} from "@ant-design/pro-components";
 
 const Center: React.FC = () => {
     const [loginUser, setLoginUser] = useState<API.UserVO>();
@@ -97,7 +94,7 @@ const Center: React.FC = () => {
             <Row>
                 <Descriptions title="个人信息" column={2}>
                     <Descriptions.Item label="用户名">{loginUser?.userName}</Descriptions.Item>
-                    <Descriptions.Item label="性别">{loginUser?.gender}</Descriptions.Item>
+                    <Descriptions.Item label="性别">{loginUser?.gender===0?'女':'男'}</Descriptions.Item>
                     <Descriptions.Item label="公钥">{loginUser?.accessKey}</Descriptions.Item>
                     <Descriptions.Item label="私钥">{loginUser?.secretKey}</Descriptions.Item>
                 </Descriptions>

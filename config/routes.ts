@@ -4,7 +4,7 @@ export default [
   {
     path: '/user',
     layout: false,
-    routes: [{ name: '登录', path: '/user/login', component: './User/Login' }],
+    routes: [{ name: '登录', path: '/user/login', component: './User/Login' },{ path: '/user/register', component: './User/Register' }],
   },
   { name: '用户中心', path: '/center', component: './User/Center',hideInMenu: true },
   {
